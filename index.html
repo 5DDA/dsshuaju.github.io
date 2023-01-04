@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<script src="echarts.js"></script>
+    <script src="vintage.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header" class="alt">
+	<div class="inner">
+		<h1>大数据</h1>
+		<p>电商用户行为分析</p>
+	</div>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Banner -->
+		<section id="intro" class="main">
+			<span class="icon fa-diamond major"></span>
+			<h2>电商用户行为分析</h2>
+			<p>电商业务发展迅速，网购已成为人们生活不可或缺的一部分<br />
+			用户行为分析<br />
+			流量指标</p>
+			<ul class="actions">
+				<li><a href="#" class="button big">更多</a></li>
+			</ul>
+			<div id="main" style="width: 1300px;height:900px;"></div>
+    <script type="text/javascript">
+      
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'),'vintage');
+
+      // 指定图表的配置项和数据
+      var  option;
+      option = {
+        title:{
+          text:'购物平台',
+          left:'center',
+          top:30,
+        
+          textStyle:{
+            fontStyle: 'normal' ,
+            fontSize:40 ,
+             color:'#F4A460',
+          },
+        },
+        tooltip:{},
+  legend: {
+    top: 'bottom'
+  },
+  toolbox: {
+    
+    show: true,
+    feature: {
+      dataZoom: {
+        yAxisIndex: "none"
+      },
+      dataView: {
+        readOnly: false
+      },
+      magicType: {
+        type: ["line", "bar"]
+      },
+      restore: {},
+      saveAsImage: {}
+    }
+  },
+  series: [
+    {
+      name: '电商',
+      type: 'pie',
+      radius: [100, 350],
+      center: ['50%', '50%'],
+      roseType: 'area',
+      itemStyle: {
+        borderRadius: 20
+      },
+      data: [
+        { value: 33, name: '淘宝' },
+        { value: 55, name: '亚马逊' },
+        { value: 46, name: '当当' },
+        { value: 60, name: '京东' },
+        { value: 48, name: '拍拍网' },
+        { value: 33, name: '凡客诚品' }
+        
+      ]
+    }
+  ]
+};
+  
+
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+		</section>
+
+	<!-- Items -->
+		<section class="main items">
+			
+			<article class="item">
+				
+				<header>
+					<a href="#"><img src="images/nl.png" alt="" /></a>
+					<h3>调查对象年龄</h3>
+				</header>
+				<p>受调查的年龄中，有18-25岁之间的占21%，26—45岁之间的占67%，46岁以上的占12%.</p>
+				
+				
+			</article>
+			
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/金额.png" alt="" /></a>
+					<h3>平均网购金额</h3>
+				</header>
+				<p>平均每次的购物金额中，100元以下的占54%，100-300之间的占35%，300元以上的占11%。 </p>
+				
+			</article>
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/yy.png" alt="" /></a>
+					<h3>网上购买的原因</h3>
+				</header>
+				<p>价格便宜的占44%，方便的占21%，能够买到线下不容易找到的商品占22%，纯粹是爱好的占17%。</p>
+				
+			</article>
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/种类.png" alt="" /></a>
+					<h3>网上购买商品的种类</h3>
+				</header>
+				<p>4%的人购买3c用品，74%的人买服装，7%的人买生活百货，43%的人购买化妆品，43%的人买时尚精品。</p>
+				
+			</article>
+		</section>
+
+	<!-- CTA -->
+		<section id="cta" class="main special">
+			<h2>更多资讯</h2>
+			<p>网络是个虚拟的世界，网上购物平台存在一定的风险性，这就使得在网上购物时容易被欺骗，有时候会买到假货，得不偿失。<br />
+				网络上的商品有可能描述不清楚，当事人不能够亲身了解商品的质量，当买到的商品与自己期望的不一致时，较容易形成心理落差。
+			</p>
+			<ul class="actions">
+				<li><a href="#" class="button big">电商</a></li>
+			</ul>
+		</section>
+
+	<!-- Main -->
+
+	<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		
+		</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
